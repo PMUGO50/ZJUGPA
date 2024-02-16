@@ -12,15 +12,15 @@ yyq26314@outlook.com
 
 - main.py 是主程序文件
 
-## 数据文件
-
 - label.png 是程序图标
+
+## 数据文件
 
 - stuinfo.csv 是学号与密码信息
   
   在 stuinfo.csv 中，请将 stuid, 后的xxxxxxxxxx改为学号，将 password, 后的xxxxxxxx改为密码
 
-- gpa_auto.csv 是爬取后的成绩信息
+- gpa_auto.csv 是爬取后的成绩信息，会自动创建
 
 ## 启动程序
 
