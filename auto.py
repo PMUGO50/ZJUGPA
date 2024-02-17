@@ -50,13 +50,15 @@ def getinfo(stuid, password):
     driver.switch_to.window(lst[len(lst)-1])
     
     #scroll page to choose number of items that can be seen in the table
+    sleep(1)
     target_temp = driver.find_element_by_id('pager')
     driver.execute_script("arguments[0].scrollIntoView();", target_temp)
-    sleep(1) #wait for scrolling finished
+    sleep(2) #wait for scrolling finished
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[3]/div[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[8]/select').click()
     driver.find_element(By.XPATH,'/html/body/div[2]/div/div/div[3]/div[5]/div/table/tbody/tr/td[2]/table/tbody/tr/td[8]/select/option[16]').click()
 
     #generate a DataFrame from the table of score
+    sleep(1)
     htm=driver.page_source
     data=pd.read_html(htm)[1]
 
